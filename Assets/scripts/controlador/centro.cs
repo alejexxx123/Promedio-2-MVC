@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class centro : MonoBehaviour {
 
-    GameObject punto;
+    public GameObject puntos;
+    
 	
 	// Update is called once per frame
 	void Update () {
@@ -13,10 +14,12 @@ public class centro : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        puntos.SetActive(true);
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("me estas tocando");
-
+            this.gameObject.SetActive(false);
         }
+        
     }
 }

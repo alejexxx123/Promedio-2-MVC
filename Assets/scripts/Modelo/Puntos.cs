@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class Puntos : MonoBehaviour {
 
-    float puntos;
+    public float contpuntos;
+    centro Center;
 
     // Use this for initialization
     void Start() {
-
-        puntos = 0;
+        transform.Rotate(0, 1, 0);
+        contpuntos = 0;
 
 	}
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider other)
     {
-        if ( )
+        if (other.gameObject.tag == "Player")
         {
-            puntos ++;
+            
+            Debug.Log("obtienes un punto");
+            contpuntos += 1;
+            this.gameObject.SetActive(false);
+            Debug.Log(contpuntos);
+            if (contpuntos == 4)
+            {
+                Debug.Log("tienes todos");
+                Center.gameObject.SetActive(true);
+            }
         }
     }
-}
+ }
+    
+
