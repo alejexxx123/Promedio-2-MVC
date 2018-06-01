@@ -16,7 +16,7 @@ public class move : MonoBehaviour {
         var x = Input.GetAxis("Horizontal");
         var z = Input.GetAxis("Vertical");
 
-        transform.Rotate(0, 0, -x);
-        transform.Translate(0, z, 0);
+        transform.Rotate(0, x, 0);
+        transform.Translate(0, 0, z);
     }
 }
