@@ -13,4 +13,11 @@ public class Puntos : MonoBehaviour {
 
 	}
 
+    void OnCollisionEnter(Collision col)
+    {
+        if ( )
+        {
+            puntos ++;
+        }
+    }
 }
