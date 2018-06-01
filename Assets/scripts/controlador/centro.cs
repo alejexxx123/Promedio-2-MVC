@@ -13,7 +13,7 @@ public class centro : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider other)
-    {
+    {   
         puntos.SetActive(true);
         if (other.gameObject.tag == "Player")
         {

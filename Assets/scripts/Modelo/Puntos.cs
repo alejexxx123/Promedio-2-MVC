@@ -20,14 +20,10 @@ public class Puntos : MonoBehaviour {
         {
             
             Debug.Log("obtienes un punto");
-            contpuntos += 1;
+            
             this.gameObject.SetActive(false);
-            Debug.Log(contpuntos);
-            if (contpuntos == 4)
-            {
-                Debug.Log("tienes todos");
-                Center.gameObject.SetActive(true);
-            }
+            
+            
         }
     }
  }
